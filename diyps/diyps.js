@@ -8,7 +8,7 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  img = loadImage('https://dma-git.github.io/images/bat.png');
+  img = loadImage('https://dma-git.github.io/diyps/bat.png');
 }
 
 function setup() {
@@ -56,29 +56,29 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     
     
     
-    
     // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
-
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '7') {
     fill(23, 20, 106);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
-    
-  } else if (toolChoice == '8') {
+  } else if (toolChoice == '7') {
     fill(63, 31, 164);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
     
+  } else if (toolChoice == '8') {
+    fill(219, 154, 98);
+    noStroke();
+    rect(mouseX, mouseY, 30, 30);
+    
   } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
+    fill(244, 159, 76);
+    noStroke();
+    circle(mouseX, mouseY, 40);
+    
   } else if (toolChoice == '0') {
-    stroke(0, 0);
+    noStroke();
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
     
