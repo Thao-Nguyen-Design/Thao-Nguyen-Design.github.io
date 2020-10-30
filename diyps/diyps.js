@@ -49,31 +49,31 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
 
     stroke(0, 0, 255);
     line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
     
     
     
     // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '6') {
+   } else if (toolChoice == '5') {
     fill(23, 20, 106);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
-  } else if (toolChoice == '7') {
+  } else if (toolChoice == '6') {
     fill(63, 31, 164);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
-    
-  } else if (toolChoice == '8') {
+  } else if (toolChoice == '7') {
     fill(219, 154, 98);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
     
-  } else if (toolChoice == '9') {
+  } else if (toolChoice == '8') {
     fill(244, 159, 76);
+    noStroke();
+    rect(mouseX, mouseY, 30, 30);
+    
+  } else if (toolChoice == '9') {
+    fill(242, 219, 81);
     noStroke();
     circle(mouseX, mouseY, 40);
     
