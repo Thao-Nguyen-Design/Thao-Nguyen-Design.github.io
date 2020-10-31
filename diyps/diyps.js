@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-createCanvas(600, 600);  // canvas size
+createCanvas(800, 600);  // canvas size
 background(screenbg);   // use our background screen color
 
 }
@@ -39,43 +39,52 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     
   } else if (toolChoice == '2') { // second tool
 
-    stroke(20);
+    stroke(250, 237, 49);
+    strokeWeight(4);
     line(mouseX, mouseY, pmouseX, pmouseY);
+    
   } else if (toolChoice == '3') { // third tool
 
-    stroke(300, 100, 0, 80);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '4') {
-
-    stroke(0, 0, 255);
+    stroke(0, 0, 0);
+    strokeWeight(10);
     line(mouseX, mouseY, pmouseX, pmouseY);
     
     
     
     // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
-   } else if (toolChoice == '5') {
+ 
+   } else if (toolChoice == '4') {
     fill(23, 20, 106);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
-  } else if (toolChoice == '6') {
+    
+  } else if (toolChoice == '5') {
     fill(63, 31, 164);
     noStroke();
     rect(mouseX, mouseY, 30, 30);
-  } else if (toolChoice == '7') {
+    
+  } else if (toolChoice == '6') {
     fill(219, 154, 98);
     noStroke();
-    rect(mouseX, mouseY, 30, 30);
+    circle(mouseX, mouseY, 10);
     
-  } else if (toolChoice == '8') {
+ } else if (toolChoice == '7') {
+    fill(245, 107, 73);
+    noStroke();
+    circle(mouseX, mouseY, 50);
+    
+} else if (toolChoice == '8') {
     fill(244, 159, 76);
     noStroke();
-    rect(mouseX, mouseY, 30, 30);
+    circle(mouseX, mouseY, 50);
     
   } else if (toolChoice == '9') {
     fill(242, 219, 81);
     noStroke();
-    circle(mouseX, mouseY, 40);
+    circle(mouseX, mouseY, 50);
+
+
     
   } else if (toolChoice == '0') {
     noStroke();
