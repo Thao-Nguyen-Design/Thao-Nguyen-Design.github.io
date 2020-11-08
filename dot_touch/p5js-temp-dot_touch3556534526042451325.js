@@ -25,7 +25,6 @@ function preload() {
   meo = loadImage('https://thao-nguyen-design.github.io/dot_touch/meo.png');
   squi = loadImage('https://thao-nguyen-design.github.io/dot_touch/squi.png');
   pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
-  bg = loadImage('https://thao-nguyen-design.github.io/dot_touch/background.png');
 }
 
 function setup() {
@@ -35,7 +34,7 @@ function setup() {
 } // end setup
 
 function draw() {
-  background(bg);
+  background(250,232,9);
   text(("Pokémon #" + score), width/2, 40);
   imageMode(CENTER);
   image(pokeball, mouseX, mouseY, pokeballSize, pokeballSize);
@@ -46,18 +45,6 @@ function draw() {
     if (gameState=="L2"){
   levelTwo();
   } 
-       if (gameState=="L3"){
-  levelThree();
-  } 
-    if (gameState=="L4"){
-  levelFour();
-  }     if (gameState=="L5"){
-  levelFive();
-  }     if (gameState=="L6"){
-  levelSix();
-  } 
-    }     if (gameState=="L7"){
-  levelSeven();
 } // end draw
 
 function levelOne(){
@@ -69,39 +56,12 @@ function levelOne(){
     pikay= random(height);
     score= score +1;
   }
-if (score >=1) {
+if (score >=10) {
   (gameState="L2");
 }
 }
-
-function levelTwo(){
-  text("Gotta Catch Them All!", width/2, height-30);
-  image(arti, artix, artiy, artiSize, artiSize);
-  var distToBall= dist(artix, artiy, mouseX, mouseY);
-  if (distToBall <pikaSize/2){
-    artix = random(width);
-    artiy= random(height);
-    score= score +1;
-  }
-if (score >=2) {
-  (gameState="L3");
-}
-}
-function levelThree(){
-  text("Gotta Catch Them All!", width/2, height-30);
-  image(char, charx, artiy, artiSize, artiSize);
-  var distToBall= dist(pikax, pikay, mouseX, mouseY);
-  if (distToBall <pikaSize/2){
-    pikax = random(width);
-    pikay= random(height);
-    score= score +1;
-  }
-if (score >=2) {
-  (gameState="L3");
-}
-}
-  function levelSeven(){
-    if(score >=6) {
+  function levelTwo(){
+    if(score >=10) {
     text("CONGRATS! You Got Them All!", width/2, height/2);
   image(pika, 50, 340, 50, 50);
   image(arti, 100, 340, 50, 50);
