@@ -3,6 +3,7 @@ var gameState= "L1";
 var pika;
 var pikax = 300;
 var pikay = 300;
+var pikaSize = 100;
 var arti;
 var charm;
 var eevee;
@@ -11,6 +12,8 @@ var squi;
 var artix = 300;
 var artiy = 300;
 var pokeball;
+var pokeballSize = 100;
+var bg;
 
 function preload() {
   pika = loadImage('https://thao-nguyen-design.github.io/dot_touch/pika.png');
@@ -20,21 +23,20 @@ function preload() {
   meo = loadImage('https://thao-nguyen-design.github.io/dot_touch/meo.png');
   squi = loadImage('https://thao-nguyen-design.github.io/dot_touch/squi.png');
   pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
-  background = loadImage('https://thao-nguyen-design.github.io/dot_touch/background.png');
-
+  bg = loadImage('https://thao-nguyen-design.github.io/dot_touch/background.png');
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1000, 600);
   textAlign(CENTER);
-  textSize(20);
+  textSize(25);
 } // end setup
 
 function draw() {
-  background(background);
+  background(bg);
   text(("Pokémon #" + score), width/2, 40);
   imageMode(CENTER);
-  image(pokeball, mouseX, mouseY, 80, 80);
+  image(pokeball, mouseX, mouseY, pokeballSize, pokeballSize);
   image(pika);
   if (gameState=="L1"){
   levelOne();
@@ -58,7 +60,7 @@ function draw() {
 
 function levelOne(){
   text("Gotta Catch Them All!", width/2, height-30);
-  image(pika, pikax, pikay, 100, 100);
+  image(pika, pikax, pikay, pikaSize, pikaSize);
   var distToBall= dist(pikax, pikay, mouseX, mouseY);
   if (distToBall <pikaSize/2){
     pikax = random(width);
@@ -73,10 +75,10 @@ if (score >=1) {
 function levelTwo(){
   text("Gotta Catch Them All!", width/2, height-30);
   image(arti, artix, artiy, 100, 100);
-  var distToBall= dist(pikax, pikay, mouseX, mouseY);
+  var distToBall= dist(artix, artiy, mouseX, mouseY);
   if (distToBall <pikaSize/2){
-    pikax = random(width);
-    pikay= random(height);
+    artix = random(width);
+    artiy= random(height);
     score= score +1;
   }
 if (score >=2) {
