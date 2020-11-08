@@ -4,7 +4,7 @@ var pika;
 var pikax = 300;
 var pikay = 300;
 var arti;
-var char;
+var charm;
 var eevee;
 var meo;
 var squi;
@@ -15,11 +15,12 @@ var pokeball;
 function preload() {
   pika = loadImage('https://thao-nguyen-design.github.io/dot_touch/pika.png');
   arti = loadImage('https://thao-nguyen-design.github.io/dot_touch/arti.png');
-  char = loadImage('https://thao-nguyen-design.github.io/dot_touch/char.png');
+  charm = loadImage('https://thao-nguyen-design.github.io/dot_touch/charm.png');
   eevee = loadImage('https://thao-nguyen-design.github.io/dot_touch/eevee.png');
   meo = loadImage('https://thao-nguyen-design.github.io/dot_touch/meo.png');
   squi = loadImage('https://thao-nguyen-design.github.io/dot_touch/squi.png');
   pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
+  background = loadImage('https://thao-nguyen-design.github.io/dot_touch/background.png');
 
 }
 
@@ -30,7 +31,7 @@ function setup() {
 } // end setup
 
 function draw() {
-  background(250,232,9);
+  background(background);
   text(("Pokémon #" + score), width/2, 40);
   imageMode(CENTER);
   image(pokeball, mouseX, mouseY, 80, 80);
