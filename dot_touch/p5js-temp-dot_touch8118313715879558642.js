@@ -11,6 +11,8 @@ var meo;
 var squi;
 var artix = 300;
 var artiy = 300;
+var artiSize = 100;
+
 var pokeball;
 var pokeballSize = 100;
 var bg;
@@ -74,7 +76,7 @@ if (score >=1) {
 
 function levelTwo(){
   text("Gotta Catch Them All!", width/2, height-30);
-  image(arti, artix, artiy, 100, 100);
+  image(arti, artix, artiy, artiSize, artiSize);
   var distToBall= dist(artix, artiy, mouseX, mouseY);
   if (distToBall <pikaSize/2){
     artix = random(width);
