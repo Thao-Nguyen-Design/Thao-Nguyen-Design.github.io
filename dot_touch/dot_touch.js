@@ -13,12 +13,13 @@ var pokeballSize = 80;
 
 function preload() {
   pika = loadImage('https://thao-nguyen-design.github.io/dot_touch/pika.png');
-  pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
-    arti = loadImage('https://thao-nguyen-design.github.io/dot_touch/arti.png');
+  arti = loadImage('https://thao-nguyen-design.github.io/dot_touch/arti.png');
   char = loadImage('https://thao-nguyen-design.github.io/dot_touch/char.png');
   eevee = loadImage('https://thao-nguyen-design.github.io/dot_touch/eevee.png');
   meo = loadImage('https://thao-nguyen-design.github.io/dot_touch/meo.png');
   squi = loadImage('https://thao-nguyen-design.github.io/dot_touch/squi.png');
+  pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
+
 }
 
 function setup() {
@@ -85,11 +86,11 @@ if (score >=2) {
     if(score >=6) {
     text("CONGRATS! You Got Them All!", width/2, height/2);
   image(pika, 50, 340, 50, 50);
-  image(pika, 100, 340, 50, 50);
-  image(pika, 150, 340, 50, 50);
-  image(pika, 200, 340, 50, 50);
-  image(pika, 250, 340, 50, 50);
-  image(pika, 300, 340, 50, 50);
+  image(arti, 100, 340, 50, 50);
+  image(char, 150, 340, 50, 50);
+  image(eevee, 200, 340, 50, 50);
+  image(meo, 250, 340, 50, 50);
+  image(squi, 300, 340, 50, 50);
 
   }
   }
