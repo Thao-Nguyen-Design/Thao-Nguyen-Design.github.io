@@ -66,6 +66,17 @@ function draw() {
       if (gameState=="L3"){
   levelThree();
   } 
+       if (gameState=="L4"){
+  levelFour();
+  } 
+         if (gameState=="L5"){
+  levelFive();
+  } 
+        if (gameState=="L6"){
+  levelSix();
+  }        if (gameState=="L7"){
+  levelSeven();
+  } 
 } // end draw
 
 function levelOne(){
@@ -155,12 +166,12 @@ if (score >=6) {
   function levelSeven(){
     if(score >=6) {
     text("CONGRATS! You Got Them All!", width/2, height/2);
-  image(pika, 50, 340, 50, 50);
-  image(arti, 100, 340, 50, 50);
-  image(charm, 150, 340, 50, 50);
-  image(eevee, 200, 340, 50, 50);
-  image(meo, 250, 340, 50, 50);
-  image(squi, 300, 340, 50, 50);
+  image(pika, 100, 340, 50, 50);
+  image(arti, 150, 340, 50, 50);
+  image(charm, 200, 340, 50, 50);
+  image(eevee, 250, 340, 50, 50);
+  image(meo, 300, 340, 50, 50);
+  image(squi, 350, 340, 50, 50);
 
   }
   }
