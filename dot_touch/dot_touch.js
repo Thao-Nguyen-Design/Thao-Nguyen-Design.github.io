@@ -16,10 +16,10 @@ var eeveex = 300;
 var eeveey = 300;
 var eeveeSize = 100;
 
-var meo;
-var meox = 300;
-var meoy = 300;
-var meoSize = 100;
+var bul;
+var bulx = 300;
+var buly = 300;
+var bulSize = 100;
 
 var squi;
 var squix = 300;
@@ -32,7 +32,7 @@ var artiy = 300;
 var artiSize = 100;
 
 var pokeball;
-var pokeballSize = 100;
+var pokeballSize = 90;
 var bg;
 
 function preload() {
@@ -40,7 +40,7 @@ function preload() {
   arti = loadImage('https://thao-nguyen-design.github.io/dot_touch/arti.png');
   charm = loadImage('https://thao-nguyen-design.github.io/dot_touch/charm.png');
   eevee = loadImage('https://thao-nguyen-design.github.io/dot_touch/eevee.png');
-  meo = loadImage('https://thao-nguyen-design.github.io/dot_touch/meo.png');
+  bul = loadImage('https://thao-nguyen-design.github.io/dot_touch/bul.png');
   squi = loadImage('https://thao-nguyen-design.github.io/dot_touch/squi.png');
   pokeball = loadImage('https://thao-nguyen-design.github.io/dot_touch/pokeball.png');
 }
@@ -53,9 +53,9 @@ function setup() {
 
 function draw() {
   background(250,232,9);
-  text(("Pokémon #" + score), width/2, 40);
+  text(("Pokémon #" + score), width/2, 50);
   imageMode(CENTER);
-  image(pokeball, mouseX, mouseY, 100, 100);
+  image(pokeball, mouseX, mouseY, pokeballSize, pokeballSize);
   image(pika);
   if (gameState=="L1"){
   levelOne();
@@ -65,6 +65,20 @@ function draw() {
   } 
       if (gameState=="L3"){
   levelThree();
+  } 
+       if (gameState=="L4"){
+  levelFour();
+
+  } 
+         if (gameState=="L5"){
+  levelFive();
+
+  } 
+        if (gameState=="L6"){
+  levelSix();
+
+  }        if (gameState=="L7"){
+  levelSeven();
   } 
 } // end draw
 
@@ -84,7 +98,7 @@ if (score >=1) {
 
 function levelTwo(){
   text("Gotta Catch Them All!", width/2, height-30);
-  image(arti, artix, artiy, 100, 100);
+  image(arti, artix, artiy, 120, 120);
   var distToBall= dist(artix, artiy, mouseX, mouseY);
   if (distToBall <artiSize/2){
     charmx = random(width);
@@ -112,11 +126,11 @@ if (score >=3) {
 
 function levelFour(){
   text("Gotta Catch Them All!", width/2, height-30);
-  image(eevee, eeveex, eeveey, 100, 100);
+  image(eevee, eeveex, eeveey, 110, 110);
   var distToBall= dist(eeveex, eeveey, mouseX, mouseY);
   if (distToBall <eeveeSize/2){
-    meox = random(width);
-    meoy= random(height);
+    bulx = random(width);
+    buly= random(height);
     score= score +1;
   }
 if (score >=4) {
@@ -126,9 +140,9 @@ if (score >=4) {
 
 function levelFive(){
   text("Gotta Catch Them All!", width/2, height-30);
-  image(meo, meox, meoy, 100, 100);
-  var distToBall= dist(meox, meoy, mouseX, mouseY);
-  if (distToBall <meoSize/2){
+  image(bul, bulx, buly, 150, 150);
+  var distToBall= dist(bulx, buly, mouseX, mouseY);
+  if (distToBall <bulSize/2){
     squix = random(width);
     squiy= random(height);
     score= score +1;
@@ -151,16 +165,13 @@ if (score >=6) {
   (gameState="L7");
 }
 }
-
   function levelSeven(){
-    if(score >=6) {
-    text("CONGRATS! You Got Them All!", width/2, height/2);
-  image(pika, 50, 340, 50, 50);
-  image(arti, 100, 340, 50, 50);
-  image(charm, 150, 340, 50, 50);
-  image(eevee, 200, 340, 50, 50);
-  image(meo, 250, 340, 50, 50);
-  image(squi, 300, 340, 50, 50);
+    text("CONGRATS! You got them all!", width/2, height/2);
+  image(pika, 120, 350, 70, 70);
+  image(arti, 190, 350, 70, 70);
+  image(charm, 260, 350, 70, 70);
+  image(eevee, 330, 350, 70, 70);
+  image(bul, 400, 350, 95, 95);
+  image(squi, 470, 350, 70, 70);
 
-  }
   }
