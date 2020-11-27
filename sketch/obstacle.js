@@ -1,19 +1,22 @@
-class Train {
+class Obstacle {
+ 
   constructor() {
-    this.r = 75;
+    this.h = 70;
+    this.w = 70;
     this.x = width;
-    this.y = height - this.r;
+    this.y = height - this.h;
   }
-
+  
   move() {
-    this.x -= 16;
+    this.x -= 9;
   }
-
-  show() {
-    image(tImg, this.x, this.y, this.r, this.r);
-
-    // fill(255, 50);
-    // ellipseMode(CORNER);
-    // ellipse(this.x, this.y, this.r, this.r);
-  }
+  
+  
+show (){
+  image(tImg, this.x, this.y, this.w, this.h);
+  //fill(255, 50);
+  //ellipseMode(CORNER);
+  //ellipse(this.x, this.y, this.r, this.r);
+}
+  
 }

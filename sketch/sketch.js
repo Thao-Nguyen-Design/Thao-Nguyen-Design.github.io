@@ -1,68 +1,233 @@
-// Daniel Shiffman
-// https://thecodingtrain.com/CodingChallenges/147-chrome-dinosaur.html
-// https://youtu.be/l0HoJHc-63Q
-
-// Google Chrome Dinosaur Game (Unicorn, run!)
-// https://editor.p5js.org/codingtrain/sketches/v3thq2uhk
-
-let unicorn;
 let uImg;
 let tImg;
 let bImg;
-let trains = [];
-let soundClassifier;
+let obstacles;
+let randint;
+let score = 0;
+let lost;
+let next;
+let spread;
+var gameState= "L1";
 
-function preload() {
-  const options = {
-    probabilityThreshold: 0.95
-  };
-  soundClassifier = ml5.soundClassifier('SpeechCommands18w', options);
-  uImg = loadImage('http://thao-nguyen-design.github.io/sketch/unicorn.png');
-  tImg = loadImage('http://thao-nguyen-design.github.io/sketch/train.png');
-  bImg = loadImage('http://thao-nguyen-design.github.io/sketch/background.jpg');
+function preload(){
+  uImg = loadImage('https://thao-nguyen-design.github.io/sketch/unicorn.png');
+  tImg = loadImage('https://thao-nguyen-design.github.io/sketch/train.png');
+  bImg = loadImage('https://thao-nguyen-design.github.io/sketch/background.jpg');
 }
-
-function mousePressed() {
-  trains.push(new Train());
-}
-
 function setup() {
   createCanvas(800, 450);
-  unicorn = new Unicorn();
-  soundClassifier.classify(gotCommand);
-}
-
-function gotCommand(error, results) {
-  if (error) {
-    console.error(error);
-  }
-  console.log(results[0].label, results[0].confidence);
-  if (results[0].label == 'up') {
-    unicorn.jump();
-  }
+  textSize(24);
+  resetSketch();
 }
 
 function keyPressed() {
   if (key == ' ') {
-    unicorn.jump();
+    dinosaur.jump();
+    if (lost) {
+      resetSketch();
+    }
   }
+}
+
+function resetSketch() {
+  console.log("Restarting game");
+  score = 0;
+  lost = false;
+  obstacles = [];
+  next = 0;
+  dinosaur = new Dinosaur();
+  new Obstacle();
+  randint = int(random(50, 150));
+  loop();
 }
 
 function draw() {
-  if (random(1) < 0.005) {
-    trains.push(new Train());
-  }
-
   background(bImg);
-  for (let t of trains) {
-    t.move();
-    t.show();
-    if (unicorn.hits(t)) {
-      console.log('game over');
-      noLoop();
+  text(("Score: " + score), width/2, 50);
+  if (gameState=="L1"){
+  levelOne();
+  } 
+    if (gameState=="L2"){
+  levelTwo();
+  } 
+      if (gameState=="L3"){
+  levelThree();
+  } 
+       if (gameState=="L4"){
+  levelFour();
+
+  } 
+         if (gameState=="L5"){
+  levelFive();
+
+  } 
+        if (gameState=="L6"){
+  levelSix();
+        }
+}
+
+        
+  function levelOne(){    
+  text("Level 1", width/2, height-30);
+  next += 1;
+  if (next == randint) {
+    obstacles.push(new Obstacle());
+    score += 1;
+    next = 0;
+    randint = int(random(40, width/5));
+  }
+  for (let o of obstacles) {
+    if (o.x < 0) {
+      if (obstacles.length > 3) {
+        obstacles.shift();
+      }
     }
+    o.move();
+    o.show();
+     if (score >=6) {
+  (gameState="L2");
+}
+  if (dinosaur.hits(o)) {
+      console.log("Game Over!");
+      text('GAME OVER', 250, 200);
+      lost = true;
+      noLoop();
+  }
+  }
+      
+  dinosaur.show();
+  dinosaur.move();
+
   }
 
-  unicorn.show();
-  unicorn.move();
+  function levelTwo(){   
+  text("Level 2", width/2, height-30);
+  next += 1;
+  if (next == randint) {
+    obstacles.push(new Obstacle());
+    score += 1;
+    next = 0;
+    randint = int(random(40, width/5));
+  }
+  for (let o of obstacles) {
+    if (o.x < 0) {
+      if (obstacles.length > 3) {
+        obstacles.shift();
+      }
+    }
+    o.move();
+    o.show();
+        if (score >=11) {
+  (gameState="L3");
 }
+  if (dinosaur.hits(o)) {
+      console.log("Game Over!");
+      text('GAME OVER', 250, 200);
+      lost = true;
+      noLoop();
+  }
+  }
+  dinosaur.show();
+  dinosaur.move();
+
+  }
+  
+   function levelThree(){   
+  text("Level 3", width/2, height-30);
+  next += 1;
+  if (next == randint) {
+    obstacles.push(new Obstacle());
+    score += 1;
+    next = 0;
+    randint = int(random(40, width/5));
+  }
+  for (let o of obstacles) {
+    if (o.x < 0) {
+      if (obstacles.length > 3) {
+        obstacles.shift();
+      }
+    }
+    o.move();
+    o.show();
+        if (score >=16) {
+  (gameState="L4");
+}
+  if (dinosaur.hits(o)) {
+      console.log("Game Over!");
+      text('GAME OVER', 250, 200);
+      lost = true;
+      noLoop();
+  }
+  }
+  dinosaur.show();
+  dinosaur.move();
+
+  }
+  
+   function levelFour(){   
+  text("Level 4", width/2, height-30);
+  next += 1;
+  if (next == randint) {
+    obstacles.push(new Obstacle());
+    score += 1;
+    next = 0;
+    randint = int(random(40, width/5));
+  }
+  for (let o of obstacles) {
+    if (o.x < 0) {
+      if (obstacles.length > 3) {
+        obstacles.shift();
+      }
+    }
+    o.move();
+    o.show();
+        if (score >=21) {
+  (gameState="L5");
+}
+  if (dinosaur.hits(o)) {
+      console.log("Game Over!");
+      text('GAME OVER', 250, 200);
+      lost = true;
+      noLoop();
+  }
+  }
+  dinosaur.show();
+  dinosaur.move();
+
+  }
+  
+   function levelFive(){   
+  text("Level 5", width/2, height-30);
+  next += 1;
+  if (next == randint) {
+    obstacles.push(new Obstacle());
+    score += 1;
+    next = 0;
+    randint = int(random(40, width/5));
+  }
+  for (let o of obstacles) {
+    if (o.x < 0) {
+      if (obstacles.length > 3) {
+        obstacles.shift();
+      }
+    }
+    o.move();
+    o.show();
+        if (score >=26) {
+  (gameState="L6");
+}
+  if (dinosaur.hits(o)) {
+      console.log("Game Over!");
+     text('GAME OVER', 250, 200);
+      lost = true;
+      noLoop();
+  }
+  }
+  dinosaur.show();
+  dinosaur.move();
+
+  }
+  
+  function levelSix(){
+    text("CONGRATS! You got them all!", width/2, height/2);
+  }
