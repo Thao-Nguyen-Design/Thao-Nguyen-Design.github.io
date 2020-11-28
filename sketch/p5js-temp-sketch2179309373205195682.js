@@ -58,7 +58,7 @@ function resetSketch() {
 }
 
 function draw() {
-  background(bImg);
+  background(b1Img);
   //image(c2Img, width/2, 50, 50, 50);
   text((" " + score), width/2, 50);
   if (gameState=="L1"){
