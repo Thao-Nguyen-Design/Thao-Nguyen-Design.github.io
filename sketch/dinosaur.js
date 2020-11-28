@@ -1,8 +1,8 @@
 
 class Dinosaur{
   constructor() {
-    this.r = 100;
-    this.x = this.r;
+    this.r = 270;
+    this.x = 100;
     this.y = height - this.r;
     this.vy = 0;
     this.gravity = 2;
@@ -15,7 +15,7 @@ class Dinosaur{
   }
   
   hits(obs) {
-    return collideRectRect(this.x,this.y,this.r,this.r,obs.x,obs.y,obs.w,obs.h);
+    return collideRectRect(this.x,this.y,120,120,obs.x,obs.y,obs.w,obs.h);
   }
 
   move() {
@@ -27,20 +27,20 @@ class Dinosaur{
  
    show(){
        if (gameState=="L1"){
-    image(c1Img,this.x, this.y, this.r, this.r);
+    image(c1Img,this.x, this.y, 150, 150);
    }
      
     if (gameState=="L2"){
-    image(c2Img,this.x, this.y, this.r, this.r);
+    image(c2Img,this.x, this.y, 150, 150);
     }
       if (gameState=="L3"){
-   image(c3Img,this.x, this.y, this.r, this.r);
+   image(c3Img,this.x, this.y, 150, 150);
       }
          if (gameState=="L4"){
-   image(c4Img,this.x, this.y, this.r, this.r);
+   image(c4Img,this.x, this.y, 150, 150);
          }
          if (gameState=="L5"){
-   image(c5Img,this.x, this.y, this.r, this.r);
+   image(c5Img,this.x, this.y, 150, 150);
          }
     //fill(255, 50);
     //ellipseMode(CORNER);
