@@ -31,7 +31,7 @@ function preload(){
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/background2.png');
 }
 function setup() {
-  createCanvas(1200, 700);
+  createCanvas(1000, 550);
   textSize(24);
   resetSketch();
 }
