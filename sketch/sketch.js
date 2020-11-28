@@ -1,4 +1,8 @@
-let uImg;
+let c1Img;
+let c2Img;
+let c3Img;
+let c4Img;
+let c5Img;
 let tImg;
 let bImg;
 let obstacles;
@@ -10,12 +14,16 @@ let spread;
 var gameState= "L1";
 
 function preload(){
-  uImg = loadImage('https://thao-nguyen-design.github.io/sketch/unicorn.png');
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
+  c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
+  c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
+  c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
+  c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
   tImg = loadImage('https://thao-nguyen-design.github.io/sketch/train.png');
   bImg = loadImage('https://thao-nguyen-design.github.io/sketch/background.jpg');
 }
 function setup() {
-  createCanvas(800, 450);
+  createCanvas(1200, 700);
   textSize(24);
   resetSketch();
 }
@@ -43,12 +51,14 @@ function resetSketch() {
 
 function draw() {
   background(bImg);
-  text(("Score: " + score), width/2, 50);
+  //image(c2Img, width/2, 50, 50, 50);
+  text((" " + score), width/2, 50);
   if (gameState=="L1"){
   levelOne();
   } 
     if (gameState=="L2"){
   levelTwo();
+
   } 
       if (gameState=="L3"){
   levelThree();
@@ -67,7 +77,7 @@ function draw() {
 }
 
         
-  function levelOne(){    
+  function levelOne(){ 
   text("Level 1", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -94,13 +104,11 @@ function draw() {
       noLoop();
   }
   }
-      
-  dinosaur.show();
-  dinosaur.move();
-
+   dinosaur.show();
+   dinosaur.move();
   }
 
-  function levelTwo(){   
+  function levelTwo(){ 
   text("Level 2", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -128,8 +136,7 @@ function draw() {
   }
   }
   dinosaur.show();
-  dinosaur.move();
-
+   dinosaur.move();
   }
   
    function levelThree(){   
@@ -159,8 +166,8 @@ function draw() {
       noLoop();
   }
   }
-  dinosaur.show();
-  dinosaur.move();
+   dinosaur.show();
+   dinosaur.move();
 
   }
   
