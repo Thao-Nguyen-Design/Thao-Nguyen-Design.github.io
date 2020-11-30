@@ -21,7 +21,7 @@ let spread;
 var gameState= "L1";
 
 function preload(){
-  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character11.png');
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
@@ -29,9 +29,13 @@ function preload(){
   tImg = loadImage('https://thao-nguyen-design.github.io/sketch/train.png');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/background1.png');
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/background2.png');
+  b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/background3.png');
+  b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/background4.png');
+  b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/background5.png');
+
 }
 function setup() {
-  createCanvas(1100, 600);
+  createCanvas(1000, 550);
   textSize(24);
   resetSketch();
 }
@@ -149,7 +153,8 @@ function draw() {
    dinosaur.move();
   }
   
-   function levelThree(){   
+   function levelThree(){ 
+       background(b3Img);
   text("Level 3", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -182,6 +187,7 @@ function draw() {
   }
   
    function levelFour(){   
+       background(b4Img);
   text("Level 4", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -214,6 +220,7 @@ function draw() {
   }
   
    function levelFive(){   
+       background(b5Img);
   text("Level 5", width/2, height-30);
   next += 1;
   if (next == randint) {
