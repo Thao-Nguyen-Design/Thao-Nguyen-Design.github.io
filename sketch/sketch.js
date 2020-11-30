@@ -4,7 +4,7 @@ let c3Img;
 let c4Img;
 let c5Img;
 
-let tImg;
+let mImg;
 
 let b1Img;
 let b2Img;
@@ -21,17 +21,21 @@ let spread;
 var gameState= "L1";
 
 function preload(){
-  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character11.png');
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
-  tImg = loadImage('https://thao-nguyen-design.github.io/sketch/train.png');
+  mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.png');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/background1.png');
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/background2.png');
+  b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/background3.png');
+  b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/background4.png');
+  b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/background5.png');
+
 }
 function setup() {
-  createCanvas(1200, 700);
+  createCanvas(1000, 550);
   textSize(24);
   resetSketch();
 }
@@ -87,7 +91,7 @@ function draw() {
         
   function levelOne(){ 
   background(b1Img);
-  text("Level 1", width/2, height-30);
+  //text("Level 1", width/2, height-30);
   next += 1;
   if (next == randint) {
     obstacles.push(new Obstacle());
@@ -108,7 +112,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', 250, 200);
+      text('GAME OVER', width/2, height/2);
       lost = true;
       noLoop();
   }
@@ -119,7 +123,7 @@ function draw() {
 
   function levelTwo(){
       background(b2Img);
-  text("Level 2", width/2, height-30);
+  //text("Level 2", width/2, height-30);
   next += 1;
   if (next == randint) {
     obstacles.push(new Obstacle());
@@ -140,7 +144,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', 250, 200);
+      text('GAME OVER', width/2, height/2);
       lost = true;
       noLoop();
   }
@@ -149,7 +153,8 @@ function draw() {
    dinosaur.move();
   }
   
-   function levelThree(){   
+   function levelThree(){ 
+       background(b3Img);
   text("Level 3", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -182,6 +187,7 @@ function draw() {
   }
   
    function levelFour(){   
+       background(b4Img);
   text("Level 4", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -214,6 +220,7 @@ function draw() {
   }
   
    function levelFive(){   
+       background(b5Img);
   text("Level 5", width/2, height-30);
   next += 1;
   if (next == randint) {
