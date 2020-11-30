@@ -21,7 +21,7 @@ let spread;
 var gameState= "L1";
 
 function preload(){
-  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character11.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
@@ -31,7 +31,7 @@ function preload(){
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/background2.png');
 }
 function setup() {
-  createCanvas(1000, 550);
+  createCanvas(1200, 700);
   textSize(24);
   resetSketch();
 }
