@@ -37,6 +37,7 @@ function preload(){
 function setup() {
   createCanvas(1000, 550);
   textSize(24);
+  fill(255, 255, 255);
   resetSketch();
 }
 
