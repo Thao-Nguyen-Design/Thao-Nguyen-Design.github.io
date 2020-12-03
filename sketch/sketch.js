@@ -27,16 +27,17 @@ function preload(){
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
   mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.png');
-  b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/background1.png');
-  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/background2.png');
-  b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/background3.png');
-  b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/background4.png');
-  b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/background5.png');
+  b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/1.png');
+  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/2.png');
+  b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/3.png');
+  b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/4.png');
+  b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/5.png');
 
 }
 function setup() {
   createCanvas(1000, 550);
-  textSize(24);
+  textSize(60);
+  fill(255, 255, 255);
   resetSketch();
 }
 
@@ -62,7 +63,7 @@ function resetSketch() {
 }
 
 function draw() {
-  text((" " + score), width/2, 100);
+  //text((" " + score), width/2, 100);
   //background(b1Img);
   //image(c2Img, width/2, 50, 50, 50);
   if (gameState=="L1"){
@@ -91,7 +92,7 @@ function draw() {
         
   function levelOne(){ 
   background(b1Img);
-  text((" " + score), width/2, 100);
+  text((" " + score), 840, 70);
   //text("Level 1", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -124,7 +125,7 @@ function draw() {
 
   function levelTwo(){
       background(b2Img);
-  text((" " + score), width/2, 100);
+  text((" " + score), 840, 70);
   //text("Level 2", width/2, height-30);
   next += 1;
   if (next == randint) {
@@ -157,8 +158,8 @@ function draw() {
   
    function levelThree(){ 
     background(b3Img);
-   text((" " + score), width/2, 100);
-  text("Level 3", width/2, height-30);
+  text((" " + score), 840, 70);
+  //text("Level 3", width/2, height-30);
   next += 1;
   if (next == randint) {
     obstacles.push(new Obstacle());
@@ -179,7 +180,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', 250, 200);
+      text('GAME OVER', width/2, height/2);
       lost = true;
       noLoop();
   }
@@ -189,10 +190,10 @@ function draw() {
 
   }
   
-   function levelFour(){   
-       background(b4Img);
-  text((" " + score), width/2, 100);
-  text("Level 4", width/2, height-30);
+   function levelFour(){  
+         background(b4Img);
+  text((" " + score), 840, 70);
+  //text("Level 4", width/2, height-30);
   next += 1;
   if (next == randint) {
     obstacles.push(new Obstacle());
@@ -213,7 +214,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', 250, 200);
+      text('GAME OVER', width/2, height/2);
       lost = true;
       noLoop();
   }
@@ -225,8 +226,8 @@ function draw() {
   
    function levelFive(){   
   background(b5Img);
-  text((" " + score), width/2, 100);
-  text("Level 5", width/2, height-30);
+  text((" " + score), 840, 70);
+  //text("Level 5", width/2, height-30);
   next += 1;
   if (next == randint) {
     obstacles.push(new Obstacle());
@@ -247,7 +248,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-     text('GAME OVER', 250, 200);
+     text('GAME OVER', width/2, height/2);
       lost = true;
       noLoop();
   }
