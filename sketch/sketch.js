@@ -1,3 +1,5 @@
+var mode;
+
 let c1Img;
 let c2Img;
 let c3Img;
@@ -19,16 +21,16 @@ let lost;
 let next;
 let spread;
 
-var mode;
-var gameState= "L1";
+var gameState= "L0";
 
 function preload(){
+  menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
-  //mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.png');
+  mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.gif');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/1.png');
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/2.png');
   b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/3.png');
@@ -45,9 +47,19 @@ function setup() {
 }
 
 
+function resetSketch() {
+  console.log("Restarting game");
+  score = 0;
+  lost = false;
+  obstacles = [];
+  next = 0;
+  dinosaur = new Dinosaur();
+  new Obstacle();
+  randint = int(random(50, 150));
+  loop();
+}
+
 function keyPressed() {
-  if (keyCode===ENTER) {
-    mode=1;
   if (key == ' ') {
     dinosaur.jump();
     if (lost) {
@@ -55,15 +67,11 @@ function keyPressed() {
     }
   }
 }
-}
+  
 function draw() {
-  clear();
-  if (mode==0) {
-    text ('Press Enter to start', width/2, height/2);
-  }
-  if (mode==1) {
-    gameState="L1";
-  }
+   if (gameState=="L0"){
+  levelZero();
+   }
   //text((" " + score), width/2, 100);
   //background(b1Img);
   //image(c2Img, width/2, 50, 50, 50);
@@ -89,19 +97,14 @@ function draw() {
   levelSix();
         }
 }
-
-function resetSketch() {
-  console.log("Restarting game");
-  score = 0;
-  lost = false;
-  obstacles = [];
-  next = 0;
-  dinosaur = new Dinosaur();
-  new Obstacle();
-  randint = int(random(50, 150));
-  loop();
-}
-
+        
+  function levelZero(){ 
+  background(menuImg);
+      if (keyCode===ENTER) {
+          (gameState="L1");
+     }
+  }
+        
         
   function levelOne(){ 
   background(b1Img);
