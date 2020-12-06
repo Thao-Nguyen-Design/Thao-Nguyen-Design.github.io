@@ -24,6 +24,7 @@ let spread;
 var gameState= "L0";
 
 function preload(){
+  menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
@@ -98,8 +99,7 @@ function draw() {
 }
         
   function levelZero(){ 
-   background(60,210,50);
-    text ('Press Enter to start', 20, 40);
+  background(menuImg);
       if (keyCode===ENTER) {
           (gameState="L1");
      }
