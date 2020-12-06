@@ -1,3 +1,5 @@
+var mode;
+
 let c1Img;
 let c2Img;
 let c3Img;
@@ -18,7 +20,8 @@ let score = 0;
 let lost;
 let next;
 let spread;
-var gameState= "L1";
+
+var gameState= "L0";
 
 function preload(){
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
@@ -35,20 +38,13 @@ function preload(){
 
 }
 function setup() {
+  mode = 0;
   createCanvas(1000, 550);
   textSize(60);
   fill(255, 255, 255);
   resetSketch();
 }
 
-function keyPressed() {
-  if (key == ' ') {
-    dinosaur.jump();
-    if (lost) {
-      resetSketch();
-    }
-  }
-}
 
 function resetSketch() {
   console.log("Restarting game");
@@ -62,7 +58,19 @@ function resetSketch() {
   loop();
 }
 
+function keyPressed() {
+  if (key == ' ') {
+    dinosaur.jump();
+    if (lost) {
+      resetSketch();
+    }
+  }
+}
+  
 function draw() {
+   if (gameState=="L0"){
+  levelZero();
+   }
   //text((" " + score), width/2, 100);
   //background(b1Img);
   //image(c2Img, width/2, 50, 50, 50);
@@ -88,7 +96,15 @@ function draw() {
   levelSix();
         }
 }
-
+        
+  function levelZero(){ 
+   background(60,210,50);
+    text ('Press Enter to start', 20, 40);
+      if (keyCode===ENTER) {
+          (gameState="L1");
+     }
+  }
+        
         
   function levelOne(){ 
   background(b1Img);

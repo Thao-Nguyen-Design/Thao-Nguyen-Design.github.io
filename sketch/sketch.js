@@ -18,6 +18,8 @@ let score = 0;
 let lost;
 let next;
 let spread;
+
+var mode;
 var gameState= "L1";
 
 function preload(){
@@ -35,13 +37,17 @@ function preload(){
 
 }
 function setup() {
+  mode = 0;
   createCanvas(1000, 550);
   textSize(60);
   fill(255, 255, 255);
   resetSketch();
 }
 
+
 function keyPressed() {
+  if (keyCode===ENTER) {
+    mode=1;
   if (key == ' ') {
     dinosaur.jump();
     if (lost) {
@@ -49,20 +55,15 @@ function keyPressed() {
     }
   }
 }
-
-function resetSketch() {
-  console.log("Restarting game");
-  score = 0;
-  lost = false;
-  obstacles = [];
-  next = 0;
-  dinosaur = new Dinosaur();
-  new Obstacle();
-  randint = int(random(50, 150));
-  loop();
 }
-
 function draw() {
+  clear();
+  if (mode==0) {
+    text ('Press Enter to start', width/2, height/2);
+  }
+  if (mode==1) {
+    gameState="L1";
+  }
   //text((" " + score), width/2, 100);
   //background(b1Img);
   //image(c2Img, width/2, 50, 50, 50);
@@ -87,6 +88,18 @@ function draw() {
         if (gameState=="L6"){
   levelSix();
         }
+}
+
+function resetSketch() {
+  console.log("Restarting game");
+  score = 0;
+  lost = false;
+  obstacles = [];
+  next = 0;
+  dinosaur = new Dinosaur();
+  new Obstacle();
+  randint = int(random(50, 150));
+  loop();
 }
 
         
