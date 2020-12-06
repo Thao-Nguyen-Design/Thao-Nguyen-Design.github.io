@@ -14,8 +14,8 @@ class Obstacle {
   
   
 show (){
-  rect(this.x, this.y, this.w, this.h);
-  //image(mImg, this.x, this.y, this.w, this.h);
+  //rect(this.x, this.y, this.w, this.h);
+  image(mImg, this.x, this.y, this.w, this.h);
   //fill(255, 50);
   //rect(this.x, this.y, this.w, this.h);
   //ellipseMode(CORNER);
