@@ -26,7 +26,7 @@ var gameState= "L0";
 function preload(){
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
-  c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.gif');
+  c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
