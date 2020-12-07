@@ -29,7 +29,7 @@ var gameOver;
 var gameState= "L0";
 
 function preload(){
-  gameoverImg = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.png');
+  gameoverImg = loadImage('https://thao-nguyen-design.github.io/sketch/gameover.png');
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
@@ -139,6 +139,7 @@ function draw() {
       console.log("Game Over!");
       background(gameoverImg);
       dinosaur.hide();
+      obstacle.hide();
       lost = true;
       noLoop();
   }
