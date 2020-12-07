@@ -30,7 +30,7 @@ function preload(){
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
-  mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.gif');
+  mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster1.gif');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/1.png');
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/2.png');
   b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/3.png');
