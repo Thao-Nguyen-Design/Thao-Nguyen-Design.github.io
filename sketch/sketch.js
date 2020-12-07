@@ -22,6 +22,9 @@ let lost;
 let next;
 let spread;
 
+var restart;
+var PLAY = 1;
+var END = 0;
 var gameOver;
 var gameState= "L0";
 
@@ -52,6 +55,7 @@ function setup() {
 
 function resetSketch() {
   console.log("Restarting game");
+  gameState="L0";
   score = 0;
   lost = false;
   obstacles = [];
@@ -198,8 +202,8 @@ function draw() {
   (gameState="L4");
 }
   if (dinosaur.hits(o)) {
-      console.log("Game Over!");
-      text('GAME OVER', width/2, height/2);
+   console.log("Game Over!");
+      background(gameoverImg);
       lost = true;
       noLoop();
   }
@@ -232,8 +236,8 @@ function draw() {
   (gameState="L5");
 }
   if (dinosaur.hits(o)) {
-      console.log("Game Over!");
-      text('GAME OVER', width/2, height/2);
+       console.log("Game Over!");
+      background(gameoverImg);
       lost = true;
       noLoop();
   }
@@ -266,8 +270,8 @@ function draw() {
   (gameState="L6");
 }
   if (dinosaur.hits(o)) {
-      console.log("Game Over!");
-     text('GAME OVER', width/2, height/2);
+    console.log("Game Over!");
+      background(gameoverImg);
       lost = true;
       noLoop();
   }
