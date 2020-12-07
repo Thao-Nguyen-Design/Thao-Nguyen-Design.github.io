@@ -138,9 +138,9 @@ function draw() {
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
       background(gameoverImg);
-      dinosaur.hide();
       lost = true;
       noLoop();
+    dinosaur.hide();
   }
   }
    dinosaur.show();
