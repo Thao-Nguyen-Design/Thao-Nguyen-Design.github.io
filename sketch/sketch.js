@@ -7,6 +7,7 @@ let c4Img;
 let c5Img;
 
 let mImg;
+let gameoverImg;
 
 let b1Img;
 let b2Img;
@@ -21,9 +22,11 @@ let lost;
 let next;
 let spread;
 
+var gameOver;
 var gameState= "L0";
 
 function preload(){
+  gameoverImg = loadImage('https://thao-nguyen-design.github.io/sketch/gameover.png');
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
@@ -130,7 +133,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', width/2, height/2);
+      background(gameoverImg);
       lost = true;
       noLoop();
   }
@@ -163,7 +166,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      text('GAME OVER', width/2, height/2);
+      background(gameoverImg);
       lost = true;
       noLoop();
   }
