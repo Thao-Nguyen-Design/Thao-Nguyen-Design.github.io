@@ -46,6 +46,7 @@ function preload(){
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
+  
   mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.gif');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/1.png');
   b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/2.png');
@@ -142,7 +143,7 @@ function draw() {
     }
     o.move();
     o.show();
-     if (score >=6) {
+     if (score >=3) {
   (gameState="L2");
 }
   if (dinosaur.hits(o)) {
@@ -176,7 +177,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=11) {
+        if (score >=5) {
   (gameState="L3");
 }
   if (dinosaur.hits(o)) {
@@ -210,7 +211,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=16) {
+        if (score >=7) {
   (gameState="L4");
 }
   if (dinosaur.hits(o)) {
@@ -245,7 +246,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=21) {
+        if (score >=9) {
   (gameState="L5");
 }
   if (dinosaur.hits(o)) {
@@ -280,7 +281,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=26) {
+        if (score >=10) {
   (gameState="L6");
 }
   if (dinosaur.hits(o)) {
@@ -297,5 +298,7 @@ function draw() {
   }
   
   function levelSix(){
-    text("CONGRATS!", width/2, height/2);
+      background(b1Img);
+       lost = true;
+           noLoop();
   }
