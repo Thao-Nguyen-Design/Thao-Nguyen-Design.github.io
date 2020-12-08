@@ -7,7 +7,12 @@ let c4Img;
 let c5Img;
 
 let mImg;
-let gameoverImg;
+
+let over1Img;
+let over2Img;
+let over3Img;
+let over4Img;
+let over5Img;
 
 let b1Img;
 let b2Img;
@@ -29,7 +34,12 @@ var gameOver;
 var gameState= "L0";
 
 function preload(){
-  gameoverImg = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.png');
+  over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.png');
+  over2Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover2.png');
+  over3Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover3.png');
+  over4Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover4.png');
+  over5Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover5.png');
+  
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
@@ -137,7 +147,7 @@ function draw() {
 }
   if (dinosaur.hits(o)) {
       console.log("Game Over!");
-      background(gameoverImg);
+      background(over1Img);
       lost = true;
       noLoop();
     dinosaur.hide();
@@ -170,10 +180,11 @@ function draw() {
   (gameState="L3");
 }
   if (dinosaur.hits(o)) {
-      console.log("Game Over!");
-      background(gameoverImg);
+     console.log("Game Over!");
+      background(over2Img);
       lost = true;
       noLoop();
+    dinosaur.hide();
   }
   }
   dinosaur.show();
@@ -203,10 +214,11 @@ function draw() {
   (gameState="L4");
 }
   if (dinosaur.hits(o)) {
-   console.log("Game Over!");
-      background(gameoverImg);
+     console.log("Game Over!");
+      background(over3Img);
       lost = true;
       noLoop();
+    dinosaur.hide();
   }
   }
    dinosaur.show();
@@ -237,10 +249,11 @@ function draw() {
   (gameState="L5");
 }
   if (dinosaur.hits(o)) {
-       console.log("Game Over!");
-      background(gameoverImg);
+      console.log("Game Over!");
+      background(over4Img);
       lost = true;
       noLoop();
+    dinosaur.hide();
   }
   }
   dinosaur.show();
@@ -271,10 +284,11 @@ function draw() {
   (gameState="L6");
 }
   if (dinosaur.hits(o)) {
-    console.log("Game Over!");
-      background(gameoverImg);
+     console.log("Game Over!");
+      background(over5Img);
       lost = true;
       noLoop();
+    dinosaur.hide();
   }
   }
   dinosaur.show();
