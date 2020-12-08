@@ -7,6 +7,7 @@ let c4Img;
 let c5Img;
 
 let mImg;
+let winImg;
 
 let over1Img;
 let over2Img;
@@ -40,8 +41,10 @@ function preload(){
   over4Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover4.png');
   over5Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover5.png');
   
+  winImg = loadImage('https://thao-nguyen-design.github.io/sketch/win.png');  
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.png');  
-  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.gif');
+  
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
@@ -298,7 +301,7 @@ function draw() {
   }
   
   function levelSix(){
-      background(b1Img);
+      background(winImg);
        lost = true;
            noLoop();
   }
