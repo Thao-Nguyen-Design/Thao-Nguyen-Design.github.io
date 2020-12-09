@@ -34,7 +34,9 @@ var END = 0;
 var gameOver;
 var gameState= "L0";
 
+
 function preload(){
+  
   over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.gif');
   over2Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover2.png');
   over3Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover3.png');
