@@ -37,8 +37,8 @@ var gameState= "L0";
 
 function preload(){
   
-  over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.gif');
-  over2Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover2.gif');
+  over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.png');
+  over2Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover2.png');
   over3Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover3.png');
   over4Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover4.png');
   over5Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover5.png');
@@ -54,7 +54,7 @@ function preload(){
   
   mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.gif');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/b1a.gif');
-  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/b2.png');
+  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/b2.gif');
   b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/3.png');
   b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/4.png');
   b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/5.png');
