@@ -54,7 +54,7 @@ function preload(){
   
   mImg = loadImage('https://thao-nguyen-design.github.io/sketch/monster.gif');
   b1Img = loadImage('https://thao-nguyen-design.github.io/sketch/b1a.gif');
-  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/b2.png');
+  b2Img = loadImage('https://thao-nguyen-design.github.io/sketch/2.png');
   b3Img = loadImage('https://thao-nguyen-design.github.io/sketch/3.png');
   b4Img = loadImage('https://thao-nguyen-design.github.io/sketch/4.png');
   b5Img = loadImage('https://thao-nguyen-design.github.io/sketch/5.png');
@@ -148,7 +148,7 @@ function draw() {
     }
     o.move();
     o.show();
-     if (score >=11) {
+     if (score >=6) {
   (gameState="L2");
 }
   if (dinosaur.hits(o)) {
@@ -182,7 +182,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=16) {
+        if (score >=11) {
   (gameState="L3");
 }
   if (dinosaur.hits(o)) {
@@ -216,7 +216,7 @@ function draw() {
     }
     o.move();
     o.show();
-        if (score >=20) {
+        if (score >=16) {
   (gameState="L4");
 }
   if (dinosaur.hits(o)) {
