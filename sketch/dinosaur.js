@@ -27,7 +27,7 @@ class Dinosaur{
  
    show(){
        if (gameState=="L1"){
-    image(c1Img,this.x, this.y, 120, 150);
+    image(c1Img,this.x, this.y, 120, 140);
    }
      
     if (gameState=="L2"){
