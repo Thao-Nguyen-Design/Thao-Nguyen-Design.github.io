@@ -33,8 +33,13 @@ var PLAY = 1;
 var END = 0;
 var gameOver;
 var gameState= "L0";
+var trex;
+var trex_running;
 
 function preload(){
+  trex_running = loadImage("1c.png", "2c.png", "3c.png", "4c.png");
+
+  
   over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.gif');
   over2Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover2.png');
   over3Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover3.png');
@@ -45,7 +50,7 @@ function preload(){
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.gif');  
   
   c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
-  c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.gif');
+  c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
   c5Img = loadImage('https://thao-nguyen-design.github.io/sketch/character5.png');  
@@ -61,6 +66,7 @@ function preload(){
 function setup() {
   mode = 0;
   createCanvas(1000, 550);
+  trex.addAnimation("running", trex_running);
   textSize(60);
   fill(255, 255, 255);
   resetSketch();
