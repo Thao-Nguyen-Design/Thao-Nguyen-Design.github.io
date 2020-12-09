@@ -37,7 +37,10 @@ var trex;
 var trex_running;
 
 function preload(){
-  trex_running = loadImage("1c.png", "2c.png", "3c.png", "4c.png");
+  trex_running = loadImage("https://thao-nguyen-design.github.io/sketch/1c.gif", 
+  "https://thao-nguyen-design.github.io/sketch/2c.gif",
+  "https://thao-nguyen-design.github.io/sketch/3c.gif", 
+  "https://thao-nguyen-design.github.io/sketch/4c.gif");
 
   
   over1Img = loadImage('https://thao-nguyen-design.github.io/sketch/gameover1.gif');
@@ -66,7 +69,10 @@ function preload(){
 function setup() {
   mode = 0;
   createCanvas(1000, 550);
+  
+  trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
+  
   textSize(60);
   fill(255, 255, 255);
   resetSketch();
