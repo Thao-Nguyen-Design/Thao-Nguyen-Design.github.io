@@ -44,7 +44,7 @@ function preload(){
   winImg = loadImage('https://thao-nguyen-design.github.io/sketch/win.gif');  
   menuImg = loadImage('https://thao-nguyen-design.github.io/sketch/menu.gif');  
   
-  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.png');
+  c1Img = loadImage('https://thao-nguyen-design.github.io/sketch/character1.gif');
   c2Img = loadImage('https://thao-nguyen-design.github.io/sketch/character2.png');
   c3Img = loadImage('https://thao-nguyen-design.github.io/sketch/character3.png');
   c4Img = loadImage('https://thao-nguyen-design.github.io/sketch/character4.png');
